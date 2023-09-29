@@ -1,0 +1,6 @@
+Performance of Batch vs. ISAM or FixedLagSmoother
+1. Note that the performance of smoothers is identical to that of the batch only in 'retrospect'. 
+    The posterior estimates after optimization of a subgraph will not be equal to that of the
+    batch estimate. Only after the smoother has solved for the entire trajectory will the 
+    posterior be equal to that of the batch. 
+2. At what point does vertex_0, stop being influenced (or influence) by vertex_100.

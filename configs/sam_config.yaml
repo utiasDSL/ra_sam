@@ -1,0 +1,26 @@
+# Parameter for verbose logging
+verbose: False
+# Lag for SMOOTHER mode
+smoother_lag: 1.0
+# Optimization for smoother is performed after addition of 'smoother_traj_length'
+# number of vertices
+smoother_traj_length: 10
+# Run smoother iterations internally for higher accuracy. Set 0 to disable
+smoother_internal_iterations: 2
+# Optimized state that is 'posterior_state_stamp' old is published/recorded
+# This duration must be smaller than 'smoother_lag' parameter as looking
+# beyond the smoother window length is undefined.
+# posterior_state_stamp: 0.5
+drop_consec_abs_meas: False
+#
+downsample:
+  imu: 1
+# Euclidean distance threshold for which a range measurement is considered
+# as an outlier. If the predicted range measurement and the actural
+# range measurement differ by more than this threshold, its an outlier
+uwb:
+  range_res_thr: 1.0
+  bias_cov: 0.01
+# 
+#
+est_anchor_bias: False

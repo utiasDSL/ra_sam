@@ -1,0 +1,10 @@
+1. Verify that IMU preintegration is working correctly on nominal data (done)
+Result: With nominal data, the results are as expected
+
+2. Figure out timing. Timing is not accurate yet.
+
+3. Smoother traj length greater than 1 does not work with VIO as input (Sometimes).
+This perhaps related to odometry preintegration. Specifically, the solver gets stuck
+at update method of gtsam.
+
+4. Fix covariance propagation in odometry integrator.

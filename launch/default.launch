@@ -1,0 +1,11 @@
+<launch>
+    <arg name="map_robot_odometry"  default="/map_robot_odometry"/>
+    <arg name="robot_config" default="/home/abhi/repositories/dsl/dataset/vicon_testbed/configs/robot_config.yaml"/>
+
+    <arg name="sam_config" default="$(find ra_sam)/configs/sam_config.yaml"/>
+    <node name="ra_sam_node" type="ra_sam" pkg="ra_sam" args="$(arg sam_config) $(arg robot_config)">
+        <remap from="~ra_sam_odom"  to="$(arg map_robot_odometry)"/>
+    </node>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ra_sam)/launch/rviz_config.rviz"/>
+</launch>
