@@ -78,6 +78,10 @@ rosbag play <path-to-dataset>/trial1/sensor_data.bag
 
 To test with different rosbags from LSY Range-Aided Localization dataset, edit the `default.launch` file and insert the path of `robot_config.yaml` for the corresponding dataset in the `robot_config` field (highlighted below) and repeat the steps from the previous section.
 
+<p align="center">
+    <img src="doc/assets/edit_launch_file.png" alt="drawing" width="800"/>
+</p>
+
 ## Known issues
 1. In some cases, after installing GTSAM, `libmetis-gtsam.so` might not be found during roslaunch. This can result in a crash of `ra_sam` node. This can be addressed by updating the library path:
    ```
@@ -85,6 +89,4 @@ To test with different rosbags from LSY Range-Aided Localization dataset, edit t
    source ~/.bashrc
    ```
 
-<p align="center">
-    <img src="doc/assets/edit_launch_file.png" alt="drawing" width="800"/>
-</p>
+
