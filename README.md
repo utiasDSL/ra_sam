@@ -83,7 +83,7 @@ To test with different rosbags from LSY Range-Aided Localization dataset, edit t
 </p>
 
 ## Known issues
-1. In some cases, after installing GTSAM, `libmetis-gtsam.so` might not be found during roslaunch. This can result in a crash of `ra_sam` node. This can be addressed by updating the library path:
+1. In some cases, after installing GTSAM, `libmetis-gtsam.so` might not be found during roslaunch, resulting in `ra_sam` node ending abruptly. This can be addressed by updating the library path:
    ```
    echo export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib" >> ~/.bashrc
    source ~/.bashrc
