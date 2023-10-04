@@ -50,7 +50,7 @@ catkin_make -DCMAKE_BUILD_TYPE=RelWDebInfo
 
 The funcationality of the code can be tested using a rosbag from the [LSY Range-Aided Localization](https://utiasdsl.github.io/utias_ra_loc) dataset. 
 
-1. Download the [UTIAS_vicon_12122022](https://utiasdsl.github.io/utias_ra_loc/03_UTIAS_vicon_1212022.html#data_files) dataset.
+1. Download the [UTIAS_vicon_12122022](https://utiasdsl.github.io/utias_ra_loc/03_UTIAS_vicon_1212022.html#data-files) dataset.
 
 2. Unzip the dataset.
 
