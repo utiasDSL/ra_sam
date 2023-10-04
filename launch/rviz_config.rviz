@@ -101,6 +101,17 @@ Visualization Manager:
       Topic: /ground_truth
       Unreliable: false
       Value: true
+    - Alpha: 1
+      Class: rviz/PointStamped
+      Color: 204; 41; 204
+      Enabled: false
+      History Length: 1
+      Name: leica_position
+      Queue Size: 10
+      Radius: 0.20000000298023224
+      Topic: /ground_truth
+      Unreliable: false
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 238; 238; 236
@@ -129,7 +140,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 5.543776512145996
+      Distance: 14.265727043151855
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -145,9 +156,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.0253978967666626
+      Pitch: 0.6503985524177551
       Target Frame: <Fixed Frame>
-      Yaw: 3.3454043865203857
+      Yaw: 5.140420913696289
     Saved: ~
 Window Geometry:
   Displays:
@@ -166,4 +177,4 @@ Window Geometry:
     collapsed: true
   Width: 1200
   X: 60
-  Y: 0
+  Y: 27

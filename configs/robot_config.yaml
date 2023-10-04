@@ -1,0 +1,120 @@
+initial_state:
+  pos: [0, 0, 0.1] # x, y, z (m)
+  pos_cov: [0.1, 0.1, 0.1]
+  ori: [0.0, 0.0, 0., 1.] # quaternion: [qx, qy, qz, qw]
+  ori_cov: [0.5, 0.5, 0.5] # orientation roll, pitch, yaw (rad)
+  vel: [0., 0., 0.] # vx, vy, vz (m/s)
+  vel_cov: [0.1, 0.1, 0.1]
+
+world_frame: "world"
+#
+robot_frame: "base_link"
+#
+
+###################### SENSOR CONFIGURATION #########################
+sensors:
+  # Set to True always, 
+  # since only range mode is supported for
+  range: True
+  # Choise EITHER IMU OR VIO as dead-reckoning sensors
+  vio: True
+  imu: False
+
+sensor_topics:
+  range: "/uwb_range_data"
+  vio: "/vio_data"
+  imu: "/imu_data"
+
+############### IMU sensor #################
+imu:
+  pos: [0.0, 0.0, 0.0] # x, y, z (m) sensor extrinsic position 
+  ori: [0.0, 0.0, 0., 1.] # quaternion: [qx, qy, qz, qw]
+  accel_bias: [0., 0., 0.]
+  gyro_bias: [0., 0., 0.]
+  accel_cov: [6.7e-03, 6.7e-03, 6.7e-03]
+  gyro_cov: [5.15e-03, 5.15e-03, 5.15e-03]
+  accel_bias_cov: [9.99e-06, 9.99e-06, 9.99e-06]
+  gyro_bias_cov: [4.99e-08, 4.99e-08, 4.99e-08]
+  update_rate: 50
+
+################## Ultrawideband #######################
+uwb:
+  mobile_list: ["mobile_node"]
+  #
+  mobile_node:
+    pos: [-0.09, -0.00,  0.12]
+    # pos: [0.0, 0.0,  0.0]
+  #
+  anchor_list: ["anchor_0",
+    "anchor_1",
+    "anchor_2",
+    "anchor_3",
+    "anchor_4",
+    "anchor_5",
+    "anchor_6",
+    "anchor_7"]
+  #
+  anchor_blacklist: []
+  #
+  anchor_0:
+    pos: [-3.0981, -4.0029, 0.1921]
+    cov: 0.01
+    bias: 0.
+    #bias: 0.0
+
+  anchor_1:
+    pos: [-3.1842, 3.7493, 2.9246]
+    cov: 0.0113
+    bias: -0.122
+    #bias: -0.0
+
+  anchor_2:
+    pos: [3.7240, 3.6531, 0.1962]
+    cov: 0.01
+    bias: -0.04
+    #bias: -0.0
+
+  anchor_3: 
+    pos: [ 3.4491, -4.0607, 2.9921]
+    cov: 0.01
+    bias: -0.032
+    #bias: -0.0
+
+  anchor_4:
+    pos: [-2.9067, -4.0874, 2.8271]
+    cov: 0.01
+    bias: -0.073
+    #bias: -0.0
+
+  anchor_5:
+    pos: [ 3.8778, -3.8630, 0.1896]
+    cov: 0.01
+    bias: -0.019
+    #bias: -0.0
+
+  anchor_6:
+    pos: [ 3.4168, 3.5449, 3.0044]
+    cov: 0.01
+    bias: -0.135
+    #bias: -0.0
+
+  anchor_7:
+    pos: [-3.1452, 3.3640, 0.1921]
+    cov: 0.01
+    bias: 0.
+    #bias: -0.005
+
+############### VIO sensor #################
+
+vio:
+  pos: [0.02, 0.01, -0.035] # x, y, z (m) sensor extrinsic position 
+  ori: [0.000, 0.174, 0.000, 0.985] # qx, qy, qz, qw sensor extrinsic orientation
+  cov: [0.000035, 0.000035, 0.000035, 0.000035, 0.000035, 0.000035]
+  update_rate: 200
+
+# publishes estimated pose as nav_msgs/Odometry message
+publish_odom: True
+#
+broadcast_tf: false
+#
+leica_prism_offset: [0.02, 0.0, 0.05]

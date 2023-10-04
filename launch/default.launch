@@ -1,6 +1,6 @@
 <launch>
     <arg name="map_robot_odometry"  default="/map_robot_odometry"/>
-    <arg name="robot_config" default="/home/abhi/repositories/dsl/dataset/vicon_testbed/configs/robot_config.yaml"/>
+    <arg name="robot_config" default="$(find ra_sam)/configs/robot_config.yaml"/>
 
     <arg name="sam_config" default="$(find ra_sam)/configs/sam_config.yaml"/>
     <node name="ra_sam_node" type="ra_sam" pkg="ra_sam" args="$(arg sam_config) $(arg robot_config)">
