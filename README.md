@@ -63,6 +63,7 @@ roslaunch ra_sam default.launch --screen
 4. Play the rosbag from dataset
 
 ```
+source ~/catkin_ws/deve/setup.bash
 rosbag play <path-to-dataset>/trial1/sensor_data.bag
 ```
 
