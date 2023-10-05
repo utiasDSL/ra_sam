@@ -3,7 +3,7 @@ This repository contains code for range-aided localization. The code supports tw
 
 
 ## Installation
-For installing necessary dependencies and building instructions please see [https://github.com/utiasDSL/ra_lan/tree/main#dependencies].
+For installing necessary dependencies and building instructions please see [installation](https://github.com/utiasDSL/ra_lan/tree/main#dependencies).
 
 ## Testing with LSY Range-Aided Localization dataset
 
