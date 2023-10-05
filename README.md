@@ -1,5 +1,5 @@
 # Range-aided Localization
-This repository contains code for range-aided localization. The code supports two different modes of sensor fusion. More details on the algorithm will be made available soon..
+This repository contains code for range-aided localization. The code supports two different modes of sensor fusion. More details on the algorithm will be made available soon.
 
 
 ## Installation
