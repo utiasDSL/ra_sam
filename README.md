@@ -1,6 +1,8 @@
 # Range-aided Localization
-This repository contains code for range-aided localization. The code supports two different modes of sensor fusion. More details on the algorithm will be made available soon.
+This repository contains code for range-aided localization. The code supports two different modes of sensor fusion. More details on the algorithm will be made available shortly.
 
+## Note
+Not all features of the algorithm have been merged. We are in the process of updating the code base. 
 
 ## Installation
 For installing necessary dependencies and building instructions please see [installation](https://github.com/utiasDSL/ra_lan/tree/main#dependencies).
@@ -37,10 +39,14 @@ rosbag play <path-to-dataset>/trial1/sensor_data.bag
 
 ## Testing with different datasets
 
-To test with different rosbags from LSY Range-Aided Localization dataset, edit the `default.launch` file and insert the path of `robot_config.yaml` for the corresponding dataset in the `robot_config` field (highlighted below) and repeat the steps from the previous section.
+To test with different rosbags from LSY Range-Aided Localization dataset, edit the `default.launch` file insert the path of `robot_config.yaml` for the corresponding dataset in the `robot_config` field (highlighted below) and repeat the steps from the previous section.
 
 <p align="center">
     <img src="doc/assets/edit_launch_file.png" alt="drawing" width="800"/>
 </p>
+
+## Known issues
+
+1. Odometry preintegration's covariance is approximated right now. Covariance prediction needs to be merged from the corresponding branch.
 
 
